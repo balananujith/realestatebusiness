@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamSpaceRealty</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" >
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" style="height: 100px; width: 100px;" alt="DreamSpaceRealty logo">
+        </a>  
+        <div class="website-heading">
+          <span class="website-text">DreamSpaceRealty</span>
+        </div>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="./assets/images/logo.png" style="height: 100px; width: 100px; margin-bottom: 10px;" alt="DreamSpaceRealty logo">
+              <div class="website-heading">
+                <span class="website-text" style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: bold; color: #333; text-transform: uppercase; letter-spacing: 1px; margin-left: -20px; transition: color 0.3s ease;">
+                  DreamSpaceRealty
+                </span>
+              </div>
+            </a>
+                        
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="#about" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li>
+                <a href="#service" class="navbar-link" data-nav-link>Service</a>
+              </li>
+
+              <li>
+                <a href="#property" class="navbar-link" data-nav-link>Property</a>
+              </li>
+
+              <li>
+                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+
+            <button class="header-bottom-actions-btn" aria-label="Cart">
+
+             
+          <a href="cart.html"> <ion-icon name="cart-outline"></ion-icon></a>
+              <span>Cart</span>
+            </button>
+          
+          
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+    <script>
+      // Select elements
+const navOpenBtn = document.querySelector('[data-nav-open-btn]');
+const navCloseBtn = document.querySelector('[data-nav-close-btn]');
+const navbar = document.querySelector('[data-navbar]');
+const overlay = document.querySelector('[data-overlay]');
+const navLinks = document.querySelectorAll('[data-nav-link]');
+
+// Function to open navbar
+const openNavbar = () => {
+  navbar.classList.add('active');
+  overlay.classList.add('active');
+};
+
+// Function to close navbar
+const closeNavbar = () => {
+  navbar.classList.remove('active');
+  overlay.classList.remove('active');
+};
+
+// Event listeners
+navOpenBtn.addEventListener('click', openNavbar);
+navCloseBtn.addEventListener('click', closeNavbar);
+
+// Close navbar when clicking a nav link
+navLinks.forEach(link => {
+  link.addEventListener('click', closeNavbar);
+});
+
+// Close navbar when clicking the overlay
+overlay.addEventListener('click', closeNavbar);
+
+    </script>
+  </header>
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      --><section class="hero-carousel" id="home" style="background-color: #eef2f7; padding: 30px 0; position: relative; overflow: hidden;">
+  <div class="container" style="max-width: 1200px; margin: auto; position: relative;">
+    
+    <!-- Carousel Wrapper -->
+    <div class="carousel-wrapper" style="position: relative; overflow: hidden;">
+      
+      <!-- Carousel Slides -->
+      <div class="carousel-slides" style="display: flex; transition: transform 1s ease-in-out;">
+        
+        <!-- Slide 1 -->
+        <div class="hero-content-slide" style="flex: 1; min-width: 100%; display: flex; align-items: center; padding: 20px; animation: fadeSlide 1s;">
+          <div style="flex: 1; padding-right: 20px;">
+            <p class="hero-subtitle" style="display: flex; align-items: center; font-size: 18px; color: #1abc9c;">
+              <ion-icon name="home" style="margin-right: 8px; font-size: 24px; color: #3498db;"></ion-icon>
+              <span>Family Homes</span>
+            </p>
+            <h2 class="h1 hero-title" style="font-size: 36px; color: #2c3e50; margin-bottom: 10px;">Find Your Perfect Family Home</h2>
+            <p class="hero-text" style="font-size: 16px; color: #7f8c8d;">
+              Discover homes designed with care for your family to grow and thrive.
+            </p>
+            <button class="btn" style="padding: 10px 25px; background-color: #1abc9c; color: #fff; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Explore Now</button>
+          </div>
+          <figure class="hero-banner" style="flex: 1;">
+            <img src="./assets/images/hero-banner2.png" alt="Family home" style="width: 550px; height: 539px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+          </figure>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="hero-content-slide" style="flex: 1; min-width: 100%; display: flex; align-items: center; padding: 20px; animation: fadeSlide 1s;">
+          <div style="flex: 1; padding-right: 20px;">
+            <p class="hero-subtitle" style="display: flex; align-items: center; font-size: 18px; color: #f39c12;">
+              <ion-icon name="star" style="margin-right: 8px; font-size: 24px; color: #f1c40f;"></ion-icon>
+              <span>Luxury Living</span>
+            </p>
+            <h2 class="h1 hero-title" style="font-size: 36px; color: #2c3e50; margin-bottom: 10px;">Experience Luxury at its Best</h2>
+            <p class="hero-text" style="font-size: 16px; color: #7f8c8d;">
+              Step into elegance with homes offering premium finishes and spacious designs.
+            </p>
+            <button class="btn" style="padding: 10px 25px; background-color: #f39c12; color: #fff; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Learn More</button>
+          </div>
+          <figure class="hero-banner" style="flex: 1;">
+            <img src="./assets/images/hero-banner1.png" alt="Luxurious house" style="width: 550px; height: 539px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+          </figure>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="hero-content-slide" style="flex: 1; min-width: 100%; display: flex; align-items: center; padding: 20px; animation: fadeSlide 1s;">
+          <div style="flex: 1; padding-right: 20px;">
+            <p class="hero-subtitle" style="display: flex; align-items: center; font-size: 18px; color: #e74c3c;">
+              <ion-icon name="heart" style="margin-right: 8px; font-size: 24px; color: #e74c3c;"></ion-icon>
+              <span>Modern Designs</span>
+            </p>
+            <h2 class="h1 hero-title" style="font-size: 36px; color: #2c3e50; margin-bottom: 10px;">Sleek and Stylish Living</h2>
+            <p class="hero-text" style="font-size: 16px; color: #7f8c8d;">
+              Enjoy contemporary architecture and eco-friendly features in every home.
+            </p>
+            <button class="btn" style="padding: 10px 25px; background-color: #e74c3c; color: #fff; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Discover More</button>
+          </div>
+          <figure class="hero-banner" style="flex: 1;">
+            <img src="./assets/images/hero-banner3.png" alt="Modern house" style="width: 600px; height: 560px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+          </figure>
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="hero-content-slide" style="flex: 1; min-width: 100%; display: flex; align-items: center; padding: 20px; animation: fadeSlide 1s;">
+          <div style="flex: 1; padding-right: 20px;">
+            <p class="hero-subtitle" style="display: flex; align-items: center; font-size: 18px; color: #9b59b6;">
+              <ion-icon name="leaf" style="margin-right: 8px; font-size: 24px; color: #9b59b6;"></ion-icon>
+              <span>Green Living</span>
+            </p>
+            <h2 class="h1 hero-title" style="font-size: 36px; color: #2c3e50; margin-bottom: 10px;">Homes That Care for Nature</h2>
+            <p class="hero-text" style="font-size: 16px; color: #7f8c8d;">
+              Live sustainably in eco-friendly homes designed for a better tomorrow.
+            </p>
+            <button class="btn" style="padding: 10px 25px; background-color: #9b59b6; color: #fff; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Go Green</button>
+          </div>
+          <figure class="hero-banner" style="flex: 1;">
+            <img src="./assets/images/hero-banner4.png" alt="Green home" style="width: 754px; height: 539px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+          </figure>
+        </div>
+        
+        <!-- Slide 5 -->
+        <div class="hero-content-slide" style="flex: 1; min-width: 100%; display: flex; align-items: center; padding: 20px; animation: fadeSlide 1s;">
+          <div style="flex: 1; padding-right: 20px;">
+            <p class="hero-subtitle" style="display: flex; align-items: center; font-size: 18px; color: #34495e;">
+              <ion-icon name="globe" style="margin-right: 8px; font-size: 24px; color: #34495e;"></ion-icon>
+              <span>Global Reach</span>
+            </p>
+            <h2 class="h1 hero-title" style="font-size: 36px; color: #2c3e50; margin-bottom: 10px;">Homes Across the World</h2>
+            <p class="hero-text" style="font-size: 16px; color: #7f8c8d;">
+              Explore properties in prime locations across the globe.
+            </p>
+            <button class="btn" style="padding: 10px 25px; background-color: #34495e; color: #fff; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Explore More</button>
+          </div>
+          <figure class="hero-banner" style="flex: 1;">
+            <img src="./assets/images/hero-banner5.png" alt="Global properties" style="width: 800px; height: 539px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+          </figure>
+        </div>
+      </div>
+      
+      <!-- Navigation Dots -->
+      <div class="carousel-dots" style="text-align: center; margin-top: 15px;">
+        <span class="dot active" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #3498db; border-radius: 50%; display: inline-block;"></span>
+        <span class="dot" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #ccc; border-radius: 50%; display: inline-block;"></span>
+        <span class="dot" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #ccc; border-radius: 50%; display: inline-block;"></span>
+        <span class="dot" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #ccc; border-radius: 50%; display: inline-block;"></span>
+        <span class="dot" style="cursor: pointer; height: 12px; width: 12px; margin: 0 5px; background-color: #ccc; border-radius: 50%; display: inline-block;"></span>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.carousel-slides');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    let interval;
+
+    const updateCarousel = () => {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.style.backgroundColor = index === currentIndex ? '#3498db' : '#ccc';
+      });
+    };
+
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % dots.length;
+      updateCarousel();
+    };
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    interval = setInterval(nextSlide, 3000); // Start automatic transition
+  </script>
+</section>
+
+            
+      <!-- 
+        - #ABOUT
+      -->
+      <section class="about" id="about">
+        <div class="container">
+            <figure class="about-banner">
+                <img src="./assets/images/about-banner-1.png" alt="A chic and cozy living space">
+                <img src="./assets/images/about-banner-2.jpg" alt="Spacious and Vibrant Outdoor Area" class="abs-img">
+            </figure>
+    
+            <div class="about-content">
+                <h2 class="h2 about-us-heading" style="color: var(--orange-soda); font-size: var(--fs-5); font-weight: var(--fw-600); padding: 5px 20px; background: hsla(9, 100%, 62%, 0.1); width: max-content; border-radius: 50px; margin-inline: auto; margin-bottom: 15px;">Our Story</h2>  
+    
+                <p class="section-subtitle">Who We Are</p>
+    
+                <h2 class="h2 section-title">Creating Dream Spaces, One Home at a Time!</h2>
+    
+                <p class="about-text">
+                    With a passion for design and a commitment to quality, we provide homes that blend comfort, style, and innovation. Our dedicated team helps you find not just a house, but a place to make memories. Whether you're looking for a cozy retreat or a lively family home, we’ve got the perfect options for you.
+                </p>
+    
+                <ul class="about-list">
+                    <li class="about-item">
+                        <div class="about-item-icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+    
+                        <p class="about-item-text">Charming Homes for Every Lifestyle</p>
+                    </li>
+    
+                    <li class="about-item">
+                        <div class="about-item-icon">
+                            <ion-icon name="leaf-outline"></ion-icon>
+                        </div>
+    
+                        <p class="about-item-text">Eco-Friendly and Green Living Spaces</p>
+                    </li>
+    
+                    <li class="about-item">
+                        <div class="about-item-icon">
+                            <ion-icon name="wine-outline"></ion-icon>
+                        </div>
+    
+                        <p class="about-item-text">Designs That Inspire Creativity</p>
+                    </li>
+    
+                    <li class="about-item">
+                        <div class="about-item-icon">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        </div>
+    
+                        <p class="about-item-text">Safe and Secure Homes You Can Trust</p>
+                    </li>
+                </ul>
+    
+                <p class="callout">
+                    "Our mission is to turn every house into a home filled with warmth, joy, and memories. Let us help you find your perfect space!"
+                </p>
+    
+                <a href="#service" class="btn">Discover Our Exceptional Services</a>
+            </div>
+        </div>
+    </section>
+          <!-- #SERVICE --><section class="service" id="service">
+  <div class="container">
+
+    <p class="section-subtitle">Our Expertise</p>
+
+    <h2 class="h2 section-title">What We Offer</h2>
+
+    <ul class="service-list">
+
+        <li class="service-card-item">
+            <div class="service-card">
+
+                <div class="card-icon">
+                    <img src="./assets/images/service-1.png" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                    <a href="#">Buy Your Dream Home</a>
+                </h3>
+
+                <p class="card-text">
+                    Whether you're a first-time buyer or looking for an upgrade, we offer a wide range of properties that match your preferences. Let us help you find the perfect place to call home.
+                </p>
+
+                <a href="#" class="card-link">
+                    <span>Start Your Search</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+
+            </div>
+        </li>
+
+        <li class="service-card-item">
+            <div class="service-card">
+
+                <div class="card-icon">
+                    <img src="./assets/images/service-2.png" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                    <a href="#">Rent a Comfortable Space</a>
+                </h3>
+
+                <p class="card-text">
+                    From cozy apartments to spacious homes, explore a variety of rental options tailored to your needs. Our easy-to-navigate platform makes it simple to find your next rental property.
+                </p>
+
+                <a href="#" class="card-link">
+                    <span>Find A Rental</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background-color: #f7f9fc;
+        color: #333;
+    }
+
+    /* Section styling */
+    section.service {
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #fefb6b, #fcb69f);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        animation: sectionFadeIn 1s ease-out;
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center; /* Centers the content vertically */
+    }
+
+    section.service .container {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+        color: #f06e6e;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        animation: subtitleFadeIn 1.5s ease-in-out;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #3d405b;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        animation: titleSlideIn 1.5s ease-out;
+    }
+
+    /* Service list styling */
+    .service-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        animation: listFadeIn 2s ease-out;
+    }
+
+    .service-card-item {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+}
+
+    .service-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        transform: scale(0.9);
+        animation: cardPopIn 1s forwards;
+    }
+
+    /* Service Card Hover Pop-Up Effect */
+.service-card:hover {
+    transform: scale(1.05) translateY(-10px); /* Slightly lift the card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+    z-index: 10; /* Bring the hovered card to the front */
+}
+    /* Playful floating shapes */
+    .service-card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 182, 193, 0.3);
+        border-radius: 50%;
+        z-index: 0;
+        animation: float-shape 6s infinite ease-in-out;
+    }
+
+    .service-card::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 248, 220, 0.3);
+        border-radius: 50%;
+        z-index: 0;
+        animation: float-shape 6s infinite ease-in-out reverse;
+    }
+    .service-card-item:not(:hover) .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+    @keyframes float-shape {
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(20px, 20px);
+        }
+    }
+
+    /* Icon styling */
+    .card-icon {
+        background: #ffe4e1;
+        border-radius: 50%;
+        padding: 15px;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        position: relative;
+        z-index: 1;
+        transition: background 0.3s ease;
+    }
+
+    .card-icon img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-icon:hover {
+        background: #ffcccb;
+    }
+
+    /* Card title */
+    .card-title {
+        font-size: 1.2rem;
+        color: #3d405b;
+        margin-bottom: 10px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .card-title a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #6a6c7b;
+        margin-bottom: 20px;
+        z-index: 1;
+        position: relative;
+    }
+
+    /* Call-to-action link */
+    .card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #f7d794;
+        color: #3d405b;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-link:hover {
+        background: #ffcccb;
+    }
+
+    .card-link ion-icon {
+        font-size: 1.2rem;
+    }
+
+    /* Animations */
+    @keyframes sectionFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes subtitleFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes titleSlideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes listFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes cardPopIn {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes cardAppear {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</section>
+
+
+
+
+<section class="property" id="property">
+  <div class="container">
+
+    <p class="section-subtitle">Properties</p>
+
+    <h2 class="h2 section-title">Featured Listings</h2>
+
+    <ul class="property-list has-scrollbar">
+
+      <!-- Property 1 -->
+      <li>
+        <div class="property-card">
+          <figure class="card-banner">
+            <a href="#">
+              <img src="./assets/images/property-1.jpg" alt="Spacious Villa with Garden" class="w-100">
+            </a>
+
+            <div class="card-badge green">For Rent</div>
+
+            <div class="banner-actions">
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+                <address>Baner, Pune</address>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+                <span>6</span>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+                <span>3</span>
+              </button>
+            </div>
+          </figure>
+
+          <div class="card-content">
+            <div class="card-price">
+              <strong>₹75,000</strong>/Month
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Spacious Villa with Garden</a>
+            </h3>
+
+            <p class="card-text">
+              Beautiful 4 BHK Villa with a large garden area, perfect for family living.
+            </p>
+
+            <ul class="card-list">
+              <li class="card-item">
+                <strong>4</strong>
+                <ion-icon name="bed-outline"></ion-icon>
+                <span>Bedrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>3</strong>
+                <ion-icon name="man-outline"></ion-icon>
+                <span>Bathrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>3200</strong>
+                <ion-icon name="square-outline"></ion-icon>
+                <span>Square Ft</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-author">
+              <figure class="author-avatar">
+                <img src="./assets/images/author.jpg" alt="Arun Verma" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Arun Verma</a>
+                </p>
+                <p class="author-title">Real Estate Agent</p>
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+
+              <!-- Add to Wishlist Button -->
+              <a href="#" class="add-to-cart-btn" data-title="Spacious Villa with Garden" data-price="₹75,000" data-image="./assets/images/property-1.jpg">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+              </a>
+
+              <!-- Google Maps Button -->
+              <a href="https://www.google.com/maps?q=Baner,+Pune" target="_blank">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="map-outline"></ion-icon>
+                  <span>Map</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Property 2 -->
+      <li>
+        <div class="property-card">
+          <figure class="card-banner">
+            <a href="#">
+              <img src="./assets/images/property-2.jpg" alt="Luxury Apartment in South Mumbai" class="w-100">
+            </a>
+
+            <div class="card-badge orange">For Sale</div>
+
+            <div class="banner-actions">
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+                <address>Colaba, Mumbai</address>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+                <span>8</span>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+                <span>4</span>
+              </button>
+            </div>
+          </figure>
+
+          <div class="card-content">
+            <div class="card-price">
+              <strong>₹2,50,00,000</strong>
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Luxury Apartment in South Mumbai</a>
+            </h3>
+
+            <p class="card-text">
+              A stunning sea-facing 3 BHK apartment with top-tier amenities in the heart of Mumbai.
+            </p>
+
+            <ul class="card-list">
+              <li class="card-item">
+                <strong>3</strong>
+                <ion-icon name="bed-outline"></ion-icon>
+                <span>Bedrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>3</strong>
+                <ion-icon name="man-outline"></ion-icon>
+                <span>Bathrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>1800</strong>
+                <ion-icon name="square-outline"></ion-icon>
+                <span>Square Ft</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-author">
+              <figure class="author-avatar">
+                <img src="./assets/images/author1.jpg" alt="Anjali Desai" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Anjali Desai</a>
+                </p>
+                <p class="author-title">Property Consultant</p>
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+
+              <!-- Add to Wishlist Button -->
+              <a href="#" class="add-to-cart-btn" data-title="Luxury Apartment in South Mumbai" data-price="₹2,50,00,000" data-image="./assets/images/property-2.jpg">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+              </a>
+
+              <!-- Google Maps Button -->
+              <a href="https://www.google.com/maps?q=Colaba,+Mumbai" target="_blank">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="map-outline"></ion-icon>
+                  <span>Map</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Property 3 -->
+      <li>
+        <div class="property-card">
+          <figure class="card-banner">
+            <a href="#">
+              <img src="./assets/images/property-3.jpg" alt="Modern Flat in Bangalore" class="w-100">
+            </a>
+
+            <div class="card-badge green">For Rent</div>
+
+            <div class="banner-actions">
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+                <address>Whitefield, Bangalore</address>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+                <span>5</span>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+                <span>3</span>
+              </button>
+            </div>
+          </figure>
+
+          <div class="card-content">
+            <div class="card-price">
+              <strong>₹55,000</strong>/Month
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Modern Flat in Bangalore</a>
+            </h3>
+
+            <p class="card-text">
+              A sleek 2 BHK flat in a well-connected part of Bangalore, with all modern amenities.
+            </p>
+
+            <ul class="card-list">
+              <li class="card-item">
+                <strong>2</strong>
+                <ion-icon name="bed-outline"></ion-icon>
+                <span>Bedrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>2</strong>
+                <ion-icon name="man-outline"></ion-icon>
+                <span>Bathrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>1400</strong>
+                <ion-icon name="square-outline"></ion-icon>
+                <span>Square Ft</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-author">
+              <figure class="author-avatar">
+                <img src="./assets/images/author.jpg" alt="Ravi Kumar" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Ravi Kumar</a>
+                </p>
+                <p class="author-title">Property Advisor</p>
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+
+              <!-- Add to Wishlist Button -->
+              <a href="#" class="add-to-cart-btn" data-title="Modern Flat in Bangalore" data-price="₹55,000" data-image="./assets/images/property-3.jpg">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+              </a>
+
+              <!-- Google Maps Button -->
+              <a href="https://www.google.com/maps?q=Whitefield,+Bangalore" target="_blank">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="map-outline"></ion-icon>
+                  <span>Map</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Property 4 -->
+      <li>
+        <div class="property-card">
+          <figure class="card-banner">
+            <a href="#">
+              <img src="./assets/images/property-4.png" alt="Beachfront Property in Goa" class="w-100">
+            </a>
+
+            <div class="card-badge green">For Rent</div>
+
+            <div class="banner-actions">
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+                <address>Calangute, Goa</address>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+                <span>3</span>
+              </button>
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+                <span>2</span>
+              </button>
+            </div>
+          </figure>
+
+          <div class="card-content">
+            <div class="card-price">
+              <strong>₹90,000</strong>/Month
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Beachfront Property in Goa</a>
+            </h3>
+
+            <p class="card-text">
+              A serene 2 BHK beachfront property with scenic views, perfect for a getaway.
+            </p>
+
+            <ul class="card-list">
+              <li class="card-item">
+                <strong>2</strong>
+                <ion-icon name="bed-outline"></ion-icon>
+                <span>Bedrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>2</strong>
+                <ion-icon name="man-outline"></ion-icon>
+                <span>Bathrooms</span>
+              </li>
+              <li class="card-item">
+                <strong>1200</strong>
+                <ion-icon name="square-outline"></ion-icon>
+                <span>Square Ft</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-author">
+              <figure class="author-avatar">
+                <img src="./assets/images/author1.jpg" alt="Priya Sharma" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Priya Sharma</a>
+                </p>
+                <p class="author-title">Real Estate Consultant</p>
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+
+              <!-- Add to Wishlist Button -->
+              <a href="#" class="add-to-cart-btn" data-title="Beachfront Property in Goa" data-price="₹90,000" data-image="./assets/images/property-4.jpg">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+              </a>
+
+              <!-- Google Maps Button -->
+              <a href="https://www.google.com/maps?q=Calangute,+Goa" target="_blank">
+                <button class="card-footer-actions-btn">
+                  <ion-icon name="map-outline"></ion-icon>
+                  <span>Map</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+  </script>
+
+</section>
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="features">
+        <div class="container">
+          <p class="section-subtitle">Exciting Perks</p>
+          <h2 class="h2 section-title">Amazing Amenities</h2>
+          <ul class="features-list">
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="car-sport-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Awesome Parking</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="water-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Splash Pool</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Super Security</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="fitness-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Fun Fitness</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Story Time</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="bed-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Super Soft Beds</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Smart & Cozy Homes</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="features-card">
+                <div class="card-icon">
+                  <ion-icon name="football-outline"></ion-icon>
+                </div>
+                <h3 class="card-title">Playground Fun</h3>
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      
+        <style>
+          /* Section Styles */
+          .features {
+  margin-top: 250px; /* Adjust this value to create space above the section */
+  padding: 50px 0;
+  background: linear-gradient(45deg, #f2f9fc, #e0f7fa);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+          /* Section Title */
+          .section-title {
+            font-size: 2.5rem;
+            color: #1e2a3a;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            animation: bounceInDown 1s ease-out;
+          }
+      
+          /* Subtitle */
+          .section-subtitle {
+            font-size: 1.5rem;
+            color: #657787;
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+          }
+      
+          /* Container Styles */
+          .features .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+          }
+      
+          /* Features List */
+          .features-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+          }
+      
+          /* Card Styles */
+          .features-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 2px solid #e4e4e4;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: transform 0.4s ease-in-out;
+            animation: cardBounce 1.2s ease-in-out;
+          }
+      
+          .features-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+          }
+      
+          /* Card Icon Styles */
+          .card-icon {
+            font-size: 50px;
+            color: #ff7f50;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+          }
+      
+          .card-icon:hover {
+            transform: scale(1.2);
+          }
+      
+          /* Card Title */
+          .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Verdana', sans-serif;
+            text-transform: capitalize;
+          }
+      
+          /* Card Button (Arrow) */
+          .card-btn {
+            display: inline-block;
+            background-color: #ff7f50;
+            border-radius: 50%;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+          }
+      
+          .card-btn ion-icon {
+            font-size: 22px;
+            color: #fff;
+          }
+      
+          .card-btn:hover {
+            background-color: #ff6347;
+          }
+      
+          /* Animation Keyframes */
+          @keyframes bounceInDown {
+            0% { transform: translateY(-1000px); opacity: 0; }
+            60% { transform: translateY(30px); opacity: 1; }
+            100% { transform: translateY(0); }
+          }
+      
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+      
+          @keyframes cardBounce {
+            0% { transform: scale(0.8); opacity: 0.6; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+          }
+      
+          /* Responsive Design */
+          @media (max-width: 1200px) {
+            .features-list {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+      
+          @media (max-width: 768px) {
+            .features-list {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+      
+          @media (max-width: 480px) {
+            .features-list {
+              grid-template-columns: 1fr;
+            }
+      
+            .features-card {
+              padding: 25px;
+            }
+      
+            .card-title {
+              font-size: 1.2rem;
+            }
+          }
+        </style>
+      </section>
+      
+      
+        
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <div class="testimonial-slider">
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>"This real estate website made finding my dream home so easy. The process was smooth and hassle-free!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="./assets/images/author.jpg" alt="Client 1">
+                <div class="author-info">
+                  <h4>John Doe</h4>
+                  <p>Homeowner</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>"Excellent customer service and guidance throughout the entire buying process. Highly recommended!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="./assets/images/author.jpg" alt="Client 2">
+                <div class="author-info">
+                  <h4>Jane Smith</h4>
+                  <p>Investor</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>"I was amazed by how quickly my property was listed and sold. Their platform made it so efficient!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="./assets/images/author.jpg" alt="Client 3">
+                <div class="author-info">
+                  <h4>Michael Lee</h4>
+                  <p>Seller</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .testimonials {
+          background-color: #f0f8ff;
+          padding: 60px 0;
+          text-align: center;
+          position: relative;
+          border-radius: 15px;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          animation: fadeIn 2s ease-in-out;
+        }
+      
+        .testimonials .section-title {
+          font-size: 2.8rem;
+          margin-bottom: 30px;
+          font-weight: bold;
+          color: #ff6347;
+          text-transform: uppercase;
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+          animation: bounceInUp 1s ease-out;
+          position: relative;
+          z-index: 10;
+        }
+      
+        .testimonial-slider {
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          gap: 30px;
+          animation: slideIn 1.5s ease-in-out;
+        }
+      
+        .testimonial-item {
+          background: #fff;
+          padding: 25px;
+          border-radius: 20px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          width: 320px;
+          transition: transform 0.3s ease-in-out;
+          position: relative;
+          animation: slideUp 1.5s ease-in-out;
+          background-image: linear-gradient(135deg, #f1f1f1, #ffffff);
+          overflow: hidden;
+        }
+      
+        .testimonial-item:hover {
+          transform: scale(1.1);
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+        }
+      
+        .testimonial-content {
+          font-style: italic;
+          color: #555;
+          margin-bottom: 20px;
+          font-size: 1.2rem;
+          position: relative;
+          z-index: 10;
+          background-color: #ffe4b5;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          animation: fadeInContent 1.5s ease-in-out;
+        }
+      
+        .testimonial-author {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          position: relative;
+          z-index: 10;
+        }
+      
+        .testimonial-author img {
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          margin-right: 15px;
+          transition: transform 0.3s ease-in-out;
+          border: 3px solid #ff6347;
+        }
+      
+        .testimonial-author img:hover {
+          transform: scale(1.15);
+        }
+      
+        .author-info h4 {
+          font-weight: bold;
+          color: #ff6347;
+          font-family: 'Arial', sans-serif;
+          font-size: 1.1rem;
+        }
+      
+        .author-info p {
+          color: #333;
+          font-size: 1rem;
+          font-style: italic;
+        }
+      
+        .testimonial-content::before {
+          content: '“';
+          font-size: 3rem;
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          color: #ff6347;
+        }
+      
+        .testimonial-content::after {
+          content: '”';
+          font-size: 3rem;
+          position: absolute;
+          bottom: -15px;
+          right: -15px;
+          color: #ff6347;
+        }
+      
+        /* Animation */
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      
+        @keyframes slideIn {
+          0% { opacity: 0; transform: translateX(-100%); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+      
+        @keyframes bounceInUp {
+          0% { transform: translateY(1000px); opacity: 0; }
+          60% { transform: translateY(-30px); opacity: 1; }
+          100% { transform: translateY(0); }
+        }
+      
+        @keyframes slideUp {
+          0% { opacity: 0; transform: translateY(30px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+      
+        @keyframes fadeInContent {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      
+        /* Floating Elements (Stars, etc.) */
+        .floating-stars {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          animation: floatStars 10s infinite linear;
+        }
+      
+        @keyframes floatStars {
+          0% { top: 50%; left: 50%; opacity: 0.5; }
+          50% { top: 60%; left: 60%; opacity: 0.7; }
+          100% { top: 50%; left: 50%; opacity: 0.5; }
+        }
+      
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .testimonial-slider {
+            flex-direction: column;
+            gap: 20px;
+          }
+      
+          .testimonial-item {
+            width: 90%;
+          }
+        }
+      </style>
+      
+      <script>
+        // Optional JavaScript for auto-sliding effect
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        const totalTestimonials = testimonials.length;
+      
+        setInterval(() => {
+          testimonials[currentIndex].style.display = 'none';
+          currentIndex = (currentIndex + 1) % totalTestimonials;
+          testimonials[currentIndex].style.display = 'block';
+        }, 3000); // Switch testimonial every 3 seconds
+      </script>
+            
+
+
+
+      <!-- 
+  - #BLOG
+-->
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta">
+        <div class="container">
+
+          <div class="cta-card">
+            <div class="card-content">
+              <h2 class="h2 card-title">Looking for a dream home?</h2>
+
+              <p class="card-text">We can help you realize your dream of a new home</p>
+            </div>
+
+            <button class="btn cta-btn" onclick="document.querySelector('#property').scrollIntoView({behavior: 'smooth'})">
+              <span>Explore Properties</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+            
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main><section id="contact" style="display: flex; flex-wrap: wrap; background-color: #1e293b; color: white; padding: 50px 20px; gap: 20px; justify-content: flex-start; height: 100vh;">
+    <!-- Contact Form Section -->
+    <div style="flex: 0 1 600px; padding: 20px; box-sizing: border-box; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); animation: fadeIn 1s ease-out; display: flex; flex-direction: column; justify-content: center; color: #333; height: 90vh;">
+        <h2 style="margin-bottom: 20px; font-size: 32px; font-family: 'Arial', sans-serif; text-align: center; color: #333; transition: color 0.3s ease;">Contact Us</h2>
+        <p style="margin-bottom: 30px; font-size: 16px; text-align: center; color: #555; transition: color 0.3s ease;">Have questions about our properties or services? Reach out to us!</p>
+        <form id="contactForm" style="padding: 20px; background: #f7f7f7; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+            <label for="name" style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #333;">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" style="width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; transition: border-color 0.3s ease;" required>
+
+            <label for="email" style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #333;">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" style="width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; transition: border-color 0.3s ease;" required>
+
+            <label for="message" style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #333;">Your Message</label>
+            <textarea id="message" name="message" placeholder="How can we assist you?" rows="5" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; resize: none; transition: border-color 0.3s ease;" required></textarea>
+
+            <button type="submit" style="width: 100%; padding: 15px; background: #4caf50; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">Get in Touch</button>
+            <p id="responseMessage" style="margin-top: 15px; font-size: 14px; color: #4caf50; display: none;"></p>
+        </form>
+    </div>
+
+    <!-- Google Map Section -->
+    <div style="flex: 1 1 350px; min-width: 350px; height: 90vh; padding: 0; margin: 0; box-sizing: border-box; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); animation: slideIn 1s ease-out; display: flex; flex-direction: column; justify-content: flex-start;">
+        <!-- Map Container -->
+        <div id="map-container" style="width: 100%; height: 100%; margin: 0; padding: 0; border-radius: 0;"></div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(this);
+
+            fetch("https://formspree.io/f/meoqwwdd", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                },
+                body: formData,
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        document.getElementById("responseMessage").style.display = "block";
+                        document.getElementById("responseMessage").textContent = "Thank you! Your message has been sent.";
+                        document.getElementById("contactForm").reset();
+                    } else {
+                        document.getElementById("responseMessage").style.display = "block";
+                        document.getElementById("responseMessage").style.color = "red";
+                        document.getElementById("responseMessage").textContent = "Oops! Something went wrong. Please try again.";
+                    }
+                })
+                .catch(() => {
+                    document.getElementById("responseMessage").style.display = "block";
+                    document.getElementById("responseMessage").style.color = "red";
+                    document.getElementById("responseMessage").textContent = "Oops! Something went wrong. Please try again.";
+                });
+        });
+
+        function initMap() {
+            const location = { lat: 8.524139, lng: 76.936638 }; // Trivandrum, Kerala, India
+
+            const map = new google.maps.Map(document.getElementById("map-container"), {
+                center: location,
+                zoom: 12,
+                disableDefaultUI: true, // Hide UI controls
+                scrollwheel: false, // Disable scroll zoom
+                draggable: true, // Enable drag-to-move
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Our Location",
+            });
+        }
+    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD620afVIUfciV-G2nxayMZ_nEckB7Er18&callback=initMap"></script>
+</section>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="refined-footer" style="background-color: #f7f9fc; padding: 20px 0; font-family: 'Comic Sans MS', sans-serif; color: #333; border-top: 3px solid #1e88e5;">
+    <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 15px;">
+  
+      <!-- Footer Brand Section -->
+      <div class="footer-brand" style="flex: 1; min-width: 250px; text-align: center; padding: 20px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+        <a href="#" class="logo" style="display: block; margin-bottom: 10px;">
+          <img src="./assets/images/logo.png" alt="DreamSpaceRealty logo" style="max-height: 60px; width: auto; display: block; margin: 0 auto;">
+        </a>
+        <p class="footer-description" style="font-size: 14px; color: #555; font-weight: 400; line-height: 1.5; font-style: italic; padding: 15px; text-align: left; width: 100%; word-wrap: break-word;">
+          <span style="font-weight: bold; color: #1e88e5; transition: all 0.3s ease;" onmouseover="this.style.color='#ff4081'; this.style.cursor='pointer';" onmouseout="this.style.color='#1e88e5';">Your dream home, just a click away. 
+          Ready to find <span style="color: #ff4081; transition: all 0.3s ease;" onmouseover="this.style.color='#1e88e5'; this.style.cursor='pointer';" onmouseout="this.style.color='#ff4081';">tailored solutions</span> for your needs? Let’s explore together!!
+        </p>
+                
+        
+        
+      </div>
+  
+      <!-- Footer Links Section -->
+      <div class="footer-links" style="flex: 1; min-width: 250px; text-align: center; padding: 10px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+        <ul style="list-style: none; padding: 0; font-size: 14px;">
+          <li><a href="#home" style="display: block; color: #1e88e5; text-decoration: none; margin: 5px 0; transition: all 0.3s ease; font-weight: 500;">Home</a></li>
+          <li><a href="#about" style="display: block; color: #1e88e5; text-decoration: none; margin: 5px 0; transition: all 0.3s ease; font-weight: 500;">About Us</a></li>
+          <li><a href="#service" style="display: block; color: #1e88e5; text-decoration: none; margin: 5px 0; transition: all 0.3s ease; font-weight: 500;">Services</a></li>
+          <li><a href="#property" style="display: block; color: #1e88e5; text-decoration: none; margin: 5px 0; transition: all 0.3s ease; font-weight: 500;">Properties</a></li>
+          <li><a href="#contact" style="display: block; color: #1e88e5; text-decoration: none; margin: 5px 0; transition: all 0.3s ease; font-weight: 500;">Contact</a></li>
+        </ul>
+      </div>
+  <!-- Footer Contact Section -->
+<!-- Footer Contact Section -->
+<div class="footer-contact" style="flex: 1; min-width: 250px; text-align: center; padding: 10px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+  <ul style="list-style: none; padding: 0; font-size: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; margin: 0;">
+    <li>
+      <a href="tel:+919847654321" style="color: #ff4081; display: block; margin: 10px 0; text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+        <ion-icon name="call-outline" style="margin-right: 8px; font-size: 18px;"></ion-icon> +91 98476 54321
+      </a>
+    </li>
+    <li>
+      <a href="mailto:info@spacefinders.com" style="color: #ff4081; display: block; margin: 10px 0; text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+        <ion-icon name="mail-outline" style="margin-right: 8px; font-size: 18px;"></ion-icon> info@DreamSpaceRealty.com
+      </a>
+    </li>
+    <li>
+      <a href="#" style="color: #ff4081; display: block; margin: 10px 0; text-decoration: none; font-weight: 500; display: flex; align-items: center; justify-content: center;">
+        <ion-icon name="location-outline" style="margin-right: 8px; font-size: 18px;"></ion-icon> Trivandrum, Kerala, India
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom" style="background-color: #1e88e5; color: white; padding: 10px; text-align: center; border-top: 3px solid #fff;">
+      <div class="footer-social" style="margin-bottom: 10px;">
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px;">
+          <li><a href="#" class="social-link" style="color: white; font-size: 20px; transition: all 0.3s ease;"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link" style="color: white; font-size: 20px; transition: all 0.3s ease;"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link" style="color: white; font-size: 20px; transition: all 0.3s ease;"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#" class="social-link" style="color: white; font-size: 20px; transition: all 0.3s ease;"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+      </div>
+      <p class="copyright" style="font-size: 12px; margin: 0;">
+        &copy; 2024 <a href="#" style="color: white; text-decoration: none;">DreamSpaceRealty</a>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script>
+    // Function to add an item to the cart
+    function addToCart(title, price, image, description) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || []; // Retrieve the cart from localStorage
+  
+      // Check if the item is already in the cart
+      const itemExists = cart.some(item => item.title === title && item.price === price && item.image === image);
+  
+      if (itemExists) {
+        // Show alert if item is already in the cart
+        alert(title + " is already in the cart!");
+      } else {
+        // Add the new item to the cart
+        cart.push({ title, price, image}); // Include description as well
+        localStorage.setItem('cart', JSON.stringify(cart)); // Store the updated cart in localStorage
+        alert(title + " has been added to the cart!"); // Show success message
+      }
+  
+      // Update cart display (optional)
+      updateCartDisplay();
+    }
+  
+    // Function to update cart display (optional, if you want to show the updated cart to the user)
+    function updateCartDisplay() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = document.getElementById('cart-count');
+      if (cartCount) {
+        cartCount.textContent = cart.length; // Update cart count display
+      }
+    }
+  
+    // Event listener for "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior
+        const title = this.getAttribute('data-title');
+        const price = this.getAttribute('data-price');
+        const image = this.getAttribute('data-image');
+        addToCart(title, price, image); // Call the function to add the item (with description) to the cart
+      });
+    });
+  
+    // Initialize cart count display on page load
+    window.onload = () => {
+      updateCartDisplay(); // Call the updateCartDisplay function when the page loads
+    };
+  </script>
+  
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+
+</html>
