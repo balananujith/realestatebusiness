@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razorpay Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background: #f3f3f3;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .checkout-btn {
+      margin-top: 20px;
+      background: #1a2a6c;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .checkout-btn:hover {
+      background: #fdbb2d;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Proceed with Payment</h1>
+    <p id="payment-details"></p>
+    <button class="checkout-btn" id="pay-btn">Pay Now</button>
+  </div>
+
+  <!-- Razorpay Checkout.js Library -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name");
+    const email = urlParams.get("email");
+    const contact = urlParams.get("contact");
+    const amount = urlParams.get("amount");
+
+    // Display the payment details
+    document.getElementById("payment-details").textContent =
+      `Name: ${name}, Email: ${email}, Contact: ${contact}, Amount: ₹${(amount / 100).toFixed(2)}`;
+
+    const RAZORPAY_KEY = "YOUR_RAZORPAY_API_KEY"; // Replace with your Razorpay API key
+
+    document.getElementById("pay-btn").addEventListener("click", function () {
+      const options = {
+        key: RAZORPAY_KEY,
+        amount: amount, // Amount in paise
+        currency: "INR",
+        name: name,
+        description: "Real Estate Payment",
+        prefill: { name, email, contact },
+        handler: function (response) {
+          alert(`Payment Successful! Payment ID: ${response.razorpay_payment_id}`);
+        },
+        theme: { color: "#1a2a6c" }
+      };
+
+      const razorpay = new Razorpay(options);
+      razorpay.open();
+    });
+  </script>
+</body>
+
+</html>
